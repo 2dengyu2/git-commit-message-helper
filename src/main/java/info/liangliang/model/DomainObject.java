@@ -1,4 +1,4 @@
-package com.fulinlin.model;
+package info.liangliang.model;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;

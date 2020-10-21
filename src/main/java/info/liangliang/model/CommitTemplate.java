@@ -1,4 +1,4 @@
-package com.fulinlin.model;
+package info.liangliang.model;
 
 /**
  * @program: git-commit-message-helper

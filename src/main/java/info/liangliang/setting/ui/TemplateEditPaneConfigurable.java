@@ -1,6 +1,6 @@
-package com.fulinlin.setting.ui;
+package info.liangliang.setting.ui;
 
-import com.fulinlin.storage.GitCommitMessageHelperSettings;
+import info.liangliang.storage.GitCommitMessageHelperSettings;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.options.SearchableConfigurable;
 import org.jetbrains.annotations.Nls;
@@ -28,7 +28,7 @@ public class TemplateEditPaneConfigurable implements SearchableConfigurable {
     @NotNull
     @Override
     public String getId() {
-        return "plugins.gitcommitmessagehelper";
+        return "plugins.gitcommitmessagehelper2dengyu2";
     }
 
 
@@ -45,16 +45,17 @@ public class TemplateEditPaneConfigurable implements SearchableConfigurable {
     @Nullable
     @Override
     public String getHelpTopic() {
-        return "help.gitcommitmessagehelper.configuration";
+        return "help.gitcommitmessagehelper2dengyu2.configuration";
     }
 
     @Nls(capitalization = Nls.Capitalization.Title)
     @Override
     public String getDisplayName() {
-        return "GitCommitMessageHelper";
+        return "Git Commit Message Helper 2dengyu2";
     }
 
 
+    @Override
     public void reset() {
         if (templateEditPane != null) {
             templateEditPane.reset(settings);
@@ -72,4 +73,10 @@ public class TemplateEditPaneConfigurable implements SearchableConfigurable {
         settings.setDateSettings(templateEditPane.getSettings().getDateSettings());
         settings = templateEditPane.getSettings().clone();
     }
+
+    @Override
+    public void disposeUIResources() {
+        templateEditPane.releaseEditor();
+    }
+
 }

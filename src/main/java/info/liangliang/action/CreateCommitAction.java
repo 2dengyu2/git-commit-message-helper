@@ -1,7 +1,7 @@
-package com.fulinlin.action;
+package info.liangliang.action;
 
-import com.fulinlin.storage.GitCommitMessageHelperSettings;
-import com.fulinlin.ui.CommitDialog;
+import info.liangliang.storage.GitCommitMessageHelperSettings;
+import info.liangliang.ui.CommitDialog;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.components.ServiceManager;

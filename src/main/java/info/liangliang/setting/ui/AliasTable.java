@@ -1,7 +1,7 @@
-package com.fulinlin.setting.ui;
+package info.liangliang.setting.ui;
 
-import com.fulinlin.model.TypeAlias;
-import com.fulinlin.storage.GitCommitMessageHelperSettings;
+import info.liangliang.model.TypeAlias;
+import info.liangliang.storage.GitCommitMessageHelperSettings;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.ui.JBColor;
 import com.intellij.ui.table.JBTable;
@@ -107,7 +107,9 @@ public class AliasTable extends JBTable {
 
     public void removeSelectedAliases() {
         final int[] selectedRows = getSelectedRows();
-        if (selectedRows.length == 0) return;
+        if (selectedRows.length == 0) {
+            return;
+        }
         Arrays.sort(selectedRows);
         final int originalRow = selectedRows[0];
         for (int i = selectedRows.length - 1; i >= 0; i--) {

@@ -1,8 +1,8 @@
-package com.fulinlin.storage;
+package info.liangliang.storage;
 
-import com.fulinlin.constant.GitCommitConstants;
-import com.fulinlin.model.DataSettings;
-import com.fulinlin.model.TypeAlias;
+import info.liangliang.constant.GitCommitConstants;
+import info.liangliang.model.DataSettings;
+import info.liangliang.model.TypeAlias;
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
@@ -54,17 +54,17 @@ public class GitCommitMessageHelperSettings implements PersistentStateComponent<
         try {
             dataSettings.setTemplate(GitCommitConstants.DEFAULT_TEMPLATE);
             List<TypeAlias> typeAliases = new LinkedList<>();
-            typeAliases.add(new TypeAlias("feature", "A new feature"));
-            typeAliases.add(new TypeAlias("fix", "A bug fix"));
-            typeAliases.add(new TypeAlias("docs", "Documentation only changes"));
-            typeAliases.add(new TypeAlias("style", "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)"));
-            typeAliases.add(new TypeAlias("refactor", "A code change that neither fixes a bug nor adds a feature"));
-            typeAliases.add(new TypeAlias("perf", "A code change that improves performance"));
-            typeAliases.add(new TypeAlias("test", "Adding missing tests or correcting existing tests"));
-            typeAliases.add(new TypeAlias("build", "Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)"));
-            typeAliases.add(new TypeAlias("ci", "Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)"));
-            typeAliases.add(new TypeAlias("chore", "Other changes that don't modify src or test files"));
-            typeAliases.add(new TypeAlias("revert", "Reverts a previous commit"));
+            typeAliases.add(new TypeAlias("feat", "新功能"));
+            typeAliases.add(new TypeAlias("fix", "Bug 修复"));
+            typeAliases.add(new TypeAlias("docs", "文档更新"));
+            typeAliases.add(new TypeAlias("style", "改进代码结构/代码格式"));
+            typeAliases.add(new TypeAlias("refactor", "代码重构"));
+            typeAliases.add(new TypeAlias("perf", "性能优化"));
+            typeAliases.add(new TypeAlias("test", "添加或更新测试"));
+            typeAliases.add(new TypeAlias("build", "构建系统或依赖更新"));
+            typeAliases.add(new TypeAlias("ci", "CI 配置"));
+            typeAliases.add(new TypeAlias("chore", "杂项 非src/test文件的更新"));
+            typeAliases.add(new TypeAlias("revert", "commit 回退"));
             dataSettings.setTypeAliases(typeAliases);
         } catch (Exception e) {
             log.error("loadDefaultSettings failed", e);

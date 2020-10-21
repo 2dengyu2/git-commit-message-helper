@@ -1,4 +1,4 @@
-package com.fulinlin.setting.ui;
+package info.liangliang.setting.ui;
 
 import com.intellij.openapi.ui.DialogWrapper;
 import org.jetbrains.annotations.Nullable;
@@ -10,6 +10,10 @@ public class AliasEditor extends DialogWrapper {
     private JTextField titleField;
     private JTextField descriptionField;
 
+    @Override
+    protected void dispose() {
+        super.dispose();
+    }
 
     public interface Validator {
         boolean isOK(String name, String value);
@@ -23,6 +27,7 @@ public class AliasEditor extends DialogWrapper {
         init();
     }
 
+    @Override
     public String getTitle() {
         return titleField.getText().trim();
     }

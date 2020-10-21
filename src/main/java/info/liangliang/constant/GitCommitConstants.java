@@ -1,4 +1,4 @@
-package com.fulinlin.constant;
+package info.liangliang.constant;
 
 /**
  * @program: git-commit-message-helper

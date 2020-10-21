@@ -1,6 +1,6 @@
-package com.fulinlin.utils;
+package info.liangliang.utils;
 
-import com.fulinlin.model.CommitTemplate;
+import info.liangliang.model.CommitTemplate;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.runtime.RuntimeConstants;

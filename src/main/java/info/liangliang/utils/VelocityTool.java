@@ -1,4 +1,4 @@
-package com.fulinlin.utils;
+package info.liangliang.utils;
 
 import org.apache.commons.lang.StringUtils;
 

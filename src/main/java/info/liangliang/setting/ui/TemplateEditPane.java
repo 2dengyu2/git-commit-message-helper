@@ -1,7 +1,6 @@
-package com.fulinlin.setting.ui;
+package info.liangliang.setting.ui;
 
-import com.fulinlin.model.TypeAlias;
-import com.fulinlin.storage.GitCommitMessageHelperSettings;
+import info.liangliang.storage.GitCommitMessageHelperSettings;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.application.ApplicationManager;
@@ -19,7 +18,6 @@ import org.jetbrains.annotations.NotNull;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
-import java.util.List;
 import java.util.Optional;
 
 
@@ -86,7 +84,6 @@ public class TemplateEditPane {
         settings.getDateSettings().setTemplate(templateEditor.getDocument().getText());
         return settings;
     }
-
     public void reset(GitCommitMessageHelperSettings settings ) {
         this.settings = settings.clone();
         aliasTable.reset(settings);
@@ -95,7 +92,9 @@ public class TemplateEditPane {
 
 
     public boolean isSettingsModified(GitCommitMessageHelperSettings settings) {
-        if (aliasTable.isModified(settings)) return true;
+        if (aliasTable.isModified(settings)) {
+            return true;
+        }
         return isModified(settings);
     }
 
@@ -114,5 +113,8 @@ public class TemplateEditPane {
         return mainPenel;
     }
 
+    public void releaseEditor(){
+        EditorFactory.getInstance().releaseEditor(templateEditor);
+    }
 
 }

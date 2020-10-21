@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: objenesis-3.0.1.jar cloning-1.9.12.jar
+

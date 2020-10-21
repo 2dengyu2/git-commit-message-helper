@@ -1,13 +1,18 @@
 <idea-plugin>
     <id>commit-message-helper-idea-plugin</id>
-    <name>Git Commit Message Helper</name>
-    <vendor email="13103779727@163.com" url="https://github.com/AutismSuperman">FuLinLin</vendor>
-    <version>1.0.0</version>
+    <name>Git Commit Message Helper 2dengyu2</name>
+    <vendor email="649355204@qq.com" url="https://github.com/2dengyu2">2dengyu2</vendor>
+    <version>1.2.0</version>
     <description>
         <![CDATA[
              <div>
                 <h2>Introduction</h2>
                 <br>
+                <ul>
+                    <li>改写自https://github.com/AutismSuperman</li>
+                    <li>标准化了提交类型</li>
+                    <li>汉化了用得到的描述</li>
+                </ul>
                 <ul>
                     <li>A plugin that helps you standardize submissions</li>
                     <li>This plugin is an upgraded version of the source idea plugin git-commit-template,adding a series of
@@ -69,19 +74,19 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <applicationService serviceImplementation="com.fulinlin.storage.GitCommitMessageHelperSettings"/>
-        <applicationConfigurable instance="com.fulinlin.setting.ui.TemplateEditPaneConfigurable"/>
+        <applicationService serviceImplementation="info.liangliang.storage.GitCommitMessageHelperSettings"/>
+        <applicationConfigurable instance="info.liangliang.setting.ui.TemplateEditPaneConfigurable"/>
     </extensions>
 
     <application-components>
         <!-- Add your application components here -->
         <component>
-            <implementation-class>com.fulinlin.setting.ui.TemplateEditPaneConfigurable</implementation-class>
+            <implementation-class>info.liangliang.setting.ui.TemplateEditPaneConfigurable</implementation-class>
         </component>
     </application-components>
 
     <actions>
-        <action id="Commit.Button" class="com.fulinlin.action.CreateCommitAction"
+        <action id="Commit.Button" class="info.liangliang.action.CreateCommitAction"
                 text="Create Commit Message"
                 description="Create commit message"
                 icon="PluginIcons.ICON">

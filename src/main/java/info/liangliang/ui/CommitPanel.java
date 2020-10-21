@@ -1,12 +1,10 @@
-package com.fulinlin.ui;
+package info.liangliang.ui;
 
-import com.fulinlin.model.TypeAlias;
-import com.fulinlin.storage.GitCommitMessageHelperSettings;
+import info.liangliang.model.TypeAlias;
+import info.liangliang.storage.GitCommitMessageHelperSettings;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.vfs.VfsUtil;
 
 import javax.swing.*;
-import java.io.File;
 import java.util.List;
 
 

@@ -7,12 +7,15 @@ tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
 
-group 'com.fulinlin'
-version '1.0.0'
+group 'info.liangliang'
+version '1.2.0'
 
 sourceCompatibility = 1.8
 
 repositories {
+    maven {
+        url "http://maven.aliyun.com/nexus/content/groups/public"
+    }
     mavenCentral()
 }
 
@@ -21,12 +24,22 @@ dependencies {
     compile group: 'uk.com.robust-it', name: 'cloning', version: '1.9.12'
 
 }
-
+jar {
+    String someString = ''
+    configurations.runtime.each { someString = someString + " lib\\" + it.name } //遍历项目的所有依赖的jar包赋值给变量someString
+    manifest {
+        attributes 'Class-Path': someString
+    }
+}
+task copyJar(type: Copy) {
+    from configurations.runtime
+    into('build/libs/lib')
+}
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
 //    version 'IU-2017.1'
     version 'IU-2020.1'
-    pluginName 'Git Commit Message Helper'
+    pluginName 'Git Commit Message Helper 2dengyu2'
     updateSinceUntilBuild false
 }
 patchPluginXml {

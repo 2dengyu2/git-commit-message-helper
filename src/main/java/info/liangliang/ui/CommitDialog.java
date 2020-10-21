@@ -1,6 +1,6 @@
-package com.fulinlin.ui;
+package info.liangliang.ui;
 
-import com.fulinlin.storage.GitCommitMessageHelperSettings;
+import info.liangliang.storage.GitCommitMessageHelperSettings;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.DialogWrapper;
 import org.jetbrains.annotations.Nullable;

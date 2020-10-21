@@ -1,9 +1,9 @@
-package com.fulinlin.ui;
+package info.liangliang.ui;
 
-import com.fulinlin.model.CommitTemplate;
-import com.fulinlin.model.TypeAlias;
-import com.fulinlin.storage.GitCommitMessageHelperSettings;
-import com.fulinlin.utils.VelocityUtils;
+import info.liangliang.model.CommitTemplate;
+import info.liangliang.model.TypeAlias;
+import info.liangliang.storage.GitCommitMessageHelperSettings;
+import info.liangliang.utils.VelocityUtils;
 import org.apache.commons.lang.StringUtils;
 
 /**
